@@ -1,22 +1,21 @@
 import React, {useState} from 'react'
+import Counter from "./components/Counter";
+import ClassCounter from "./components/ClassCounter";
 
 function App() {
 
-    const [likes, setLikes] = useState(5)
-
-    function inc() {
-       setLikes(likes+1)
-    }
-
-    function dec() {
-        setLikes(likes-1)
-    }
+    // const [value, setValue] = useState("Text in input")
 
     return (
     <div className="App">
-        <h1>{likes}</h1>
-        <button onClick={inc}>Inc</button>
-        <button onClick={dec}>Dec</button>
+        <Counter/>
+        <ClassCounter/>
+        {/*<h1>{value}</h1>*/}
+        {/*<input*/}
+        {/*    type="text"*/}
+        {/*    value={value}*/}
+        {/*    onChange={event => setValue(event.target.value)}*/}
+        {/*/>*/}
     </div>
   );
 }
